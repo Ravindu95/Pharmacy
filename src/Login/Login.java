@@ -18,7 +18,8 @@ public class Login extends javax.swing.JFrame {
     /**
      * Creates new form Login
      */
-    int attempt=0;
+    int attempt = 0;
+
     public Login() {
         initComponents();
     }
@@ -236,12 +237,25 @@ public class Login extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "User NAme or Password Invalid", "Pharamacy Sytem", JOptionPane.INFORMATION_MESSAGE);
             jPassword.setText("");
             jLogin.setText("");
-            attempt+=1;
-            
-            if(attempt==3){
+            jBDocter.setEnabled(false);
+            jBConstant.setEnabled(false);
+            jBDocter.setEnabled(false);
+            jBHelp.setEnabled(false);
+            jBHospital.setEnabled(false);
+            jBPatient.setEnabled(false);
+            jBPayment.setEnabled(false);
+            jBPharamcyffice.setEnabled(false);
+            jBPharmacist.setEnabled(false);
+            jBPharmacy.setEnabled(false);
+            jBSpecialist.setEnabled(false);
+            jBSurgery.setEnabled(false);
+            jBGPAppointment.setEnabled(false);
+            attempt += 1;
+
+            if (attempt == 3) {
                 JOptionPane.showMessageDialog(null, "You have tried 3 times", "Pharamacy Sytem", JOptionPane.ERROR_MESSAGE);
-                 System.exit(0);
-               
+                System.exit(0);
+
             }
         }
 
@@ -287,9 +301,9 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowActivated
 
     private void jBPharmacyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBPharmacyActionPerformed
-  Pharmacy myPharmacy=new Pharmacy(); 
-  myPharmacy.setVisible(true);
-  // TODO add your handling code here:
+        Pharmacy myPharmacy = new Pharmacy();
+        myPharmacy.setVisible(true);
+        // TODO add your handling code here:
     }//GEN-LAST:event_jBPharmacyActionPerformed
 
     /**
